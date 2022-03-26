@@ -25,12 +25,12 @@
         <form action="prosesLogin.php" method="post">
             <div class="login-username">
                 <label for="login-username">Username</label>
-                <input type="text" name="login-username">
+                <input type="text" name="login-username" required>
             </div>
     
             <div class="login-password">
                 <label for="login-password">Password</label>
-                <input type="password" name="login-password" id="">
+                <input type="password" name="login-password" required>
             </div>
 
             <div class="login-alert">
