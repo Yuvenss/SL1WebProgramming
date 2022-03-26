@@ -400,15 +400,24 @@
 
 .login-btn{
     margin-left: 79px;
+    display: flex;
+    flex-direction: row;
 }
 
-.login-btn button{
+.login-btn a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 50px;
     border: none;
     background-color: #fdd7ac;
+    appearance: button;
     cursor: pointer;
     font-size: 15pt;
+    color: black;
+    text-decoration: none;
 }
 
 .login-btn input{

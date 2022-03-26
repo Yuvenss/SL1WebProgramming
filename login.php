@@ -47,9 +47,7 @@
     
             <div class="login-btn">
                 <input type="submit" value="Login" name="login-btn">
-                <a href="./welcome.php">
-                    <button>Kembali</button>
-                </a>
+                <a href="./welcome.php" class="button">Kembali</a>
             </div>
         </form>
     </div>
