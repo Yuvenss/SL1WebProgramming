@@ -117,32 +117,9 @@
                     <?php echo $_SESSION["kode-pos"]; ?>
                 </b>
             </div>
-            <div class="foto-profil">
-                <label for="foto-profil">Foto Profil</label>
-                <b>
-                    <img src="./assets/<?php  $_SESSION["foto-profil"]; ?>" alt="fotoProfil" srcset="">
-                </b>
-            </div>
-        </div>
-
-        <div class="row5">
-            <div class="username">
-                <label for="username">Username</label>
-                <b>
-                    <?php echo $_SESSION["username"]; ?>
-                </b>
-            </div>
-            <div class="pass-1">
-                <label for="pass-1">Password 1</label>
-                <b>
-                    <?php echo $_SESSION["pass-1"]; ?>
-                </b>
-            </div>
-            <div class="pass-2">
-                <label for="pass-2">Password 2</label>
-                <b>
-                    <?php echo $_SESSION["pass-2"]; ?>
-                </b>
+            <div class="foto-profil-profile">
+                <label for="foto-profil-profile">Foto Profil</label>
+                <img src="./assets/<?php echo $_SESSION["foto-profil"]; ?>" alt="fotoProfil" srcset="">
             </div>
         </div>
     </div>

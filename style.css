@@ -61,6 +61,14 @@
     font-size: 25pt;
 }
 
+.welcome-alert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-size: 20pt;
+}
+
 /* Register */
 
 .reg-title{
@@ -78,14 +86,23 @@
     font-size: 16pt;
 }
 
-.form-reg input[type=text], input[type=email], input[type=file], input[type=date], input[type=number]{
+.form-reg input[type=text], input[type=email], input[type=date], input[type=number]{
     border: none;
     height: 30px;
     width: 250px;
     font-size: 12pt;
+    padding-left: 10px;
 }
 
 .form-reg input[type=password]{
+    border: none;
+    height: 30px;
+    width: 250px;
+    font-size: 12pt;
+    padding-left: 10px;
+}
+
+.form-reg input[type=file]{
     border: none;
     height: 30px;
     width: 250px;
@@ -290,11 +307,23 @@
     margin-right: 65px;
 }
 
-.kembali button{
+.error-regis{
+    color: red;
+    font-size: 14pt;
+    padding-right: 150px;
+}
+
+.kembali a{
     width: 150px;
     height: 50px;
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
     cursor: pointer;
+    appearance: button;
     border: solid black 2pt;
     background-color: #fdd7ac;
     font-size: 13pt;
@@ -341,6 +370,7 @@
     border: none;
     height: 40px;
     width: 500px;
+    padding-left: 10px;
 }
 
 .login-username label{
@@ -355,10 +385,17 @@
     border: none;
     height: 40px;
     width: 500px;
+    padding-left: 10px;
 }
 
 .login-password label{
     margin-right: 45px;
+}
+
+.login-alert{
+    color: red;
+    font-size: 14pt;
+    margin-bottom: 30px;
 }
 
 .login-btn{
@@ -448,4 +485,24 @@
     flex-direction: column;
     font-size: 16pt;
     margin-top: 20px;
+}
+
+/* Profile */
+
+.foto-profil-profile{
+    width: 33%;
+    margin-left: 100px;
+    padding-left: 100px;
+}
+
+.foto-profil-profile label{
+    margin-right: 53px;
+    display: flex;
+    align-items: top;
+}
+
+.foto-profil-profile img{
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
 }

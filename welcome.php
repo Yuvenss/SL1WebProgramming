@@ -29,5 +29,18 @@
             </a>
         </div>
     </div>
+
+    <div class="welcome-alert">
+        <?php
+            session_start();
+            if(isset($_SESSION["welcome-alert"])){
+                echo $_SESSION["welcome-alert"];
+                unset($_SESSION["welcome-alert"]);
+            }
+            else{
+                echo "";
+            }
+        ?>
+    </div>
 </body>
 </html>

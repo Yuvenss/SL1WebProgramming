@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body style="background-color: #fbfdac;">
+
+    <?php
+        session_start();
+        if(!isset($_SESSION["username"]) && !isset($_SESSION["pass-1"])){
+            $_SESSION["welcome-alert"] = "Mohon melakukan registrasi terlebih dahulu!";
+            header("Location: welcome.php");
+        }
+    ?>
+
     <div class="login-title">
         Login
     </div>
@@ -22,6 +31,18 @@
             <div class="login-password">
                 <label for="login-password">Password</label>
                 <input type="password" name="login-password" id="">
+            </div>
+
+            <div class="login-alert">
+                <?php
+                    if(isset($_SESSION["login-alert"])){
+                        echo $_SESSION["login-alert"];
+                        unset($_SESSION["login-alert"]);
+                    }
+                    else{
+                        echo "";
+                    }
+                ?>
             </div>
     
             <div class="login-btn">

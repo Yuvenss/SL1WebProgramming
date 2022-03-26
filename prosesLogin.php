@@ -11,7 +11,8 @@
                 header("Location: home.php");
             }
             else{
-                echo "Username atau Password salah";
+                $_SESSION["login-alert"] = "Username atau Password salah!";
+                header("Location: login.php");
             }
         }
     }

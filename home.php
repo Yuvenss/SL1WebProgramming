@@ -30,17 +30,18 @@
     </div>
 
     <div class="main">
-        Halo <b>
+        Halo&nbsp;
+        <strong>
             <?php
                 session_start();
                 if(isset($_SESSION["nama-depan"]) && isset($_SESSION["nama-tengah"]) && isset($_SESSION["nama-belakang"])){
-                    echo (" ".$_SESSION["nama-depan"]." ".$_SESSION["nama-tengah"]." ".$_SESSION["nama-belakang"]);
+                    echo ($_SESSION["nama-depan"]." ".$_SESSION["nama-tengah"]." ".$_SESSION["nama-belakang"]);
                 }
                 else{
-                    echo " ";
+                    echo "";
                 }
             ?>
-            </b>
+        </strong>
         , Selamat datang di Aplikasi Pengelolaan Keuangan
     </div>
 </body>
