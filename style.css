@@ -515,3 +515,50 @@
     max-width: 300px;
     max-height: 300px;
 }
+
+.edit-button{
+    display: flex;
+    justify-content: center;
+}
+
+.edit-button a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: #8df130;
+    appearance: button;
+    cursor: pointer;
+    font-size: 15pt;
+    color: black;
+    text-decoration: none;
+}
+
+/* Edit Profile */
+
+.foto-profil img{
+    display: flex;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.update input{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: #adf59f;
+    cursor: pointer;
+    font-size: 13pt;
+    margin-right: 20px;
+    border: solid black 2pt;
+    box-shadow: rgb(88, 88, 88) 1px 1px 5px;
+}
+
+.error-update{
+    color: red;
+    font-size: 14pt;
+    padding-right: 150px;
+}

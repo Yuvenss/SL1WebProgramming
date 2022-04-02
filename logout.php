@@ -1,5 +1,11 @@
 <?php
     session_start();
-    session_destroy();
-    header("Location: welcome.php");
+    if(!isset($_SESSION["nik-login"])) {
+        header("Location: login.php");
+    }
+    else
+    {
+        session_destroy();
+        header("Location: welcome.php");
+    }
 ?>

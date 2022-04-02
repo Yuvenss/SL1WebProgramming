@@ -10,6 +10,9 @@
 <body style="background-color: #c2f0f7;">
     <?php
         session_start();
+        if(isset($_SESSION["nik-login"])){
+            header("Location: home.php");
+        }
     ?>
     <div class="reg-title">
         Register

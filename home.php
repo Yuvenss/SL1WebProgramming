@@ -34,12 +34,17 @@
         <strong>
             <?php
                 session_start();
-                if(isset($_SESSION["nama-depan"]) && isset($_SESSION["nama-tengah"]) && isset($_SESSION["nama-belakang"])){
-                    echo ($_SESSION["nama-depan"]." ".$_SESSION["nama-tengah"]." ".$_SESSION["nama-belakang"]);
+                include "config.php";
+
+                if(!isset($_SESSION["nik-login"])) {
+                    header("Location: login.php");
                 }
-                else{
-                    echo "";
-                }
+
+                $str_query = "SELECT namaDepan, namaTengah, namaBelakang FROM users where nik = '".$_SESSION["nik-login"]."'";
+                $query = mysqli_query($connection, $str_query);
+                $row = mysqli_fetch_assoc($query);
+
+                echo $row["namaDepan"]." ".$row["namaTengah"]." ".$row["namaBelakang"];
             ?>
         </strong>
         , Selamat datang di Aplikasi Pengelolaan Keuangan

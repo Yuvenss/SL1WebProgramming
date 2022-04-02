@@ -11,9 +11,12 @@
 
     <?php
         session_start();
-        if(!isset($_SESSION["username"]) && !isset($_SESSION["pass-1"])){
-            $_SESSION["welcome-alert"] = "Mohon melakukan registrasi terlebih dahulu!";
-            header("Location: welcome.php");
+        // if(!isset($_SESSION["username"]) && !isset($_SESSION["pass-1"])){
+        //     $_SESSION["welcome-alert"] = "Mohon melakukan registrasi terlebih dahulu!";
+        //     header("Location: welcome.php");
+        // }
+        if(isset($_SESSION["nik-login"])){
+            header("Location: home.php");
         }
     ?>
 

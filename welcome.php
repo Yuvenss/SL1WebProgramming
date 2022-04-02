@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION["nik-login"])) {
+        header("Location: home.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +39,6 @@
 
     <div class="welcome-alert">
         <?php
-            session_start();
             if(isset($_SESSION["welcome-alert"])){
                 echo $_SESSION["welcome-alert"];
                 unset($_SESSION["welcome-alert"]);
