@@ -8,7 +8,7 @@
 
     $str_query = "SELECT * FROM users where nik = '".$_SESSION["nik-login"]."'";
     $query = mysqli_query($connection, $str_query);
-    $row = mysqli_fetch_assoc($query);
+    $row = mysqli_fetch_array($query);
 ?>
 
 <!DOCTYPE html>

@@ -13,7 +13,7 @@
 
         $str_query2 = "SELECT * FROM users where nik = '".$_SESSION["nik-login"]."'";
         $query2 = mysqli_query($connection, $str_query2);
-        $row2 = mysqli_fetch_assoc($query2);
+        $row2 = mysqli_fetch_array($query2);
 
         $namaDepan = $_POST["nama-depan"];
         $namaBelakang = $_POST["nama-belakang"];
@@ -27,7 +27,7 @@
         $alamat = $_POST["alamat"];
         $kodePos = $_POST["kode-pos"];
 
-        while($row = mysqli_fetch_assoc($query)){
+        while($row = mysqli_fetch_array($query)){
             if($row["noHp"] == $noHp && $row["noHp"] != $row2["noHp"]){
                 $_SESSION["noHp-error"] = "No HP sudah terdaftar<br>";
             }

@@ -10,7 +10,7 @@
         if(isset($_SESSION)){
             $str_query = "SELECT username, pass1, nik FROM users where username = '".$_POST["login-username"]."'";
             $query = mysqli_query($connection, $str_query);
-            $row = mysqli_fetch_assoc($query);
+            $row = mysqli_fetch_array($query);
             if($row["username"] == $_POST["login-username"] && $row["password"] == $_POST["login-pass1"]){
                 $_SESSION["nik-login"] = $row["nik"];
                 header("Location: home.php");

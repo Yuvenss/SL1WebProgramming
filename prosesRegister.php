@@ -27,7 +27,7 @@
         $pass1 = $_POST["pass-1"];
         $pass2 = $_POST["pass-2"];
 
-        while($row = mysqli_fetch_assoc($query)){
+        while($row = mysqli_fetch_array($query)){
             if($row["nik"] == $nik){
                 $_SESSION["nik-error"] = "NIK sudah terdaftar<br>";
             }
